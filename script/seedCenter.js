@@ -142,8 +142,12 @@ async function seed() {
   console.log('db synced!')
 
   try {
+    // const {data} = await axios.get(
+    //   'https://services5.arcgis.com/GfwWNkhOj9bNBqoJ/arcgis/rest/services/nynta/FeatureServer/0/query?where=1%3D1&outFields=*&outSR=4326&f=json'
+    // )
+
     const {data} = await axios.get(
-      'https://services5.arcgis.com/GfwWNkhOj9bNBqoJ/arcgis/rest/services/nynta/FeatureServer/0/query?where=1%3D1&outFields=*&outSR=4326&f=json'
+      'https://services5.arcgis.com/GfwWNkhOj9bNBqoJ/ArcGIS/rest/services/Neighborhood_Label_City/FeatureServer/0/query?where=1%3D1&outFields=*&outSR=4326&f=json'
     )
     const neighborhoodObj = {}
 
